@@ -5,4 +5,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### This is a game information website.
 
 
-(api key)[https://rawg.io/@edozie/apikey]
+(https://rawg.io/@edozie/apikey)[api website]
