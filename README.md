@@ -6,3 +6,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 (https://rawg.io/@edozie/apikey)[api website]
+
+<!-- installed dependencies -->
+npm: npm install redux react-redux react-router-dom styled-components framer-motion redux-thunk axios

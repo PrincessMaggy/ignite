@@ -1,21 +1,17 @@
-import React, {useEffect} from "react";
-import {useDispatch} from "react-redux";
-import {loadGames} from "./actions/gamesAction";
+import React from "react";
+// components and pages
+import Home from "./pages/Home";
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(()=>{
-    dispatch(loadGames());
-  })
-
+  
   return (
     <div className="App">
       <header className="App-header">
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-
       </header>
+      <Home/>
     </div>
   );
 }
