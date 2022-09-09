@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/ignite/static/js/main.271668ac.js",
+    "static/js/787.875c6a88.chunk.js": "/ignite/static/js/787.875c6a88.chunk.js",
+    "index.html": "/ignite/index.html",
+    "main.271668ac.js.map": "/ignite/static/js/main.271668ac.js.map",
+    "787.875c6a88.chunk.js.map": "/ignite/static/js/787.875c6a88.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.271668ac.js"
+  ]
+}
