@@ -8,6 +8,9 @@ import { useDispatch } from "react-redux";
 import { loadDetail } from "../actions/detailAction";
 // react router
 import {Link} from "react-router-dom";
+// image resize
+import { smallImage } from "../util";
+
 
 const Game =(props) =>{
     // load details
@@ -21,7 +24,7 @@ const Game =(props) =>{
             <Link to={`/game/${props.id}`}>
                 <h3>{props.name}</h3>
                 <p>{props.released}</p>
-                <img src={props.image} alt={props.name} />
+                <img src={smallImage(props.image, 640)} alt={props.name} />
             </Link>
         </StyledGame>
     );
