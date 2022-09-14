@@ -10,7 +10,7 @@ import GameDetail from "../components/GameDetail";
 
 // sytling and animation
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence,AnimateSharedLayout } from "framer-motion";
 
 const Home =() =>{
     const location = useLocation();
@@ -28,7 +28,8 @@ const {popular, newGames, upcoming} = useSelector((state) => state.games)
 
     return(
         <GameList>
-            {pathId && <GameDetail />}
+            <AnimateSharedLayout type="crossfade">
+            <AnimatePresence>{pathId && <GameDetail pathId={pathId} />} </AnimatePresence>
             <h2>Upcoming Games</h2>
             <Games>
                 {upcoming.map((game)=> 
@@ -64,7 +65,7 @@ const {popular, newGames, upcoming} = useSelector((state) => state.games)
                     key = {game.id}
                 />)}
             </Games>
-
+        </AnimateSharedLayout>
         </GameList>
     );
 };

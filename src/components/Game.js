@@ -13,6 +13,7 @@ import { smallImage } from "../util";
 
 
 const Game =(props) =>{
+    const stringPathId = props.id.toString();
     // load details
     const dispatch = useDispatch();
     const loadDetailHandler = () =>{
@@ -20,11 +21,14 @@ const Game =(props) =>{
         dispatch(loadDetail(props.id));
     }
     return(
-        <StyledGame onClick={loadDetailHandler}>
+        <StyledGame layoutId={stringPathId}  onClick={loadDetailHandler}>
             <Link to={`/game/${props.id}`}>
-                <h3>{props.name}</h3>
+                <motion.h3 layoutId={`title ${stringPathId}`}>{props.name}</motion.h3>
                 <p>{props.released}</p>
-                <img src={smallImage(props.image, 640)} alt={props.name} />
+                <motion.img 
+                layoutId={`image ${stringPathId}`}
+                src={smallImage(props.image, 640)} 
+                alt={props.name} />
             </Link>
         </StyledGame>
     );
