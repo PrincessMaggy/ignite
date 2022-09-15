@@ -9,6 +9,9 @@ import xbox from '../img/xbox.svg';
 import nintendo from '../img/nintendo.svg';
 import apple from '../img/apple.svg';
 import gamepad from '../img/gamepad.svg';
+// star images
+import starEmpty from "../img/star-empty.png";
+import starFull from "../img/star-full.png";
 
 // redux
 import { useSelector } from "react-redux";
@@ -18,6 +21,11 @@ import {useNavigate} from "react-router-dom";
 import { smallImage } from "../util";
 
 const GameDetail = ({pathId}) => {
+    
+
+    // data
+    const {screen, game, isLoading} = useSelector((state)=> state.detail)
+
     const navigate = useNavigate();
 
     // exit detail
@@ -27,6 +35,22 @@ const GameDetail = ({pathId}) => {
             navigate("/ignite");
         }
     }
+
+    // get stars
+    const getStars = () =>{
+        const star =[];
+        const rating = Math.floor(game.rating);
+        for(let i=1; i<=5; i++){
+            if(i <= rating){
+                star.push(<img src={starFull} key={i} alt="star" />)
+            }
+            else{
+                star.push(<img src={starEmpty} key={i} alt="star" />)
+            }
+        }
+        return star;
+    };
+
 
     // get platform
     const getPlatform =(platform) =>{
@@ -51,9 +75,6 @@ const GameDetail = ({pathId}) => {
                 return gamepad;
         }
     }
-
-    // data
-    const {screen, game, isLoading} = useSelector((state)=> state.detail)
     return(
         <>
         {isLoading && (
@@ -63,6 +84,7 @@ const GameDetail = ({pathId}) => {
                         <div className="rating">
                             <motion.h3 layoutId={`title ${pathId}`}>{game.name}</motion.h3>
                             <p>Rating: {game.rating} </p>
+                            {getStars()}
                         </div>
 
                         <Info>
@@ -133,6 +155,11 @@ const Stats = styled(motion.div)`
     display:flex;
     align-items: center;
     justify-content: space-between;
+    img{
+        width:2rem;
+        height:2rem;
+        display:inline;
+    }
 `
 const Info = styled(motion.div)`
     text-align: center;
