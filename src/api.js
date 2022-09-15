@@ -37,8 +37,6 @@ const upcoming_games = `games?key=824e421e1add4ebf9b4ddfdc631267a9&dates=${curre
 const newGames =  `games?key=824e421e1add4ebf9b4ddfdc631267a9&dates=${lastYear},${currentDate}&ordering=-released&page_size=2`;
 
 
-
-
 export const popularGamesURL = () => `${baseUrl}${popular_games}`;
 
 export const upcomingGamesURL =() => `${baseUrl}${upcoming_games}`;
@@ -46,6 +44,10 @@ export const upcomingGamesURL =() => `${baseUrl}${upcoming_games}`;
 export const newGamesURL = () => `${baseUrl}${newGames}`;
 
 // GAME DETAILS
-export const gameDetailURL = (game_id) => `${baseUrl}games/${game_id}.json?&key=824e421e1add4ebf9b4ddfdc631267a9`
+export const gameDetailURL = (game_id) => `${baseUrl}games/${game_id}.json?&key=824e421e1add4ebf9b4ddfdc631267a9`;
 
-export const gameScreenshotURL = (game_id) => `${baseUrl}games/${game_id}/screenshots?&.json?&key=824e421e1add4ebf9b4ddfdc631267a9`
+export const gameScreenshotURL = (game_id) => `${baseUrl}games/${game_id}/screenshots?&.json?&key=824e421e1add4ebf9b4ddfdc631267a9`;
+
+
+// searched game
+export const searchGameURL = (game_name) => `${baseUrl}games?key=824e421e1add4ebf9b4ddfdc631267a9&search=${game_name}&page_size=9`;
