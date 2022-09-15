@@ -31,18 +31,24 @@ const GameDetail = ({pathId}) => {
     // get platform
     const getPlatform =(platform) =>{
         switch(platform){
-        case "PlayStation 4":
-            return playstation;
-        case "Xbox One":
-            return xbox;
-        case "PC":
-            return steam;
-        case "Nintendo Switch":
-            return nintendo;
-        case "iOS":
-            return apple;
-        default:
-            return gamepad;
+            case "PlayStation 4":
+                return playstation;
+            case "PlayStation 5":
+                return playstation;
+            case "Xbox Series S/X":
+                return xbox;
+            case "Xbox S":
+                return xbox;
+            case "Xbox One":
+                return xbox;
+            case "PC":
+                return steam;
+            case "Nintendo Switch":
+                return nintendo;
+            case "iOS":
+                return apple;
+            default:
+                return gamepad;
         }
     }
 
