@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/ignite/static/js/main.4b6f4ce4.js",
+    "main.js": "/ignite/static/js/main.b5d1e0f4.js",
     "static/js/787.875c6a88.chunk.js": "/ignite/static/js/787.875c6a88.chunk.js",
     "static/media/steam.svg": "/ignite/static/media/steam.840878ac8ae0e05b7d7a1091cffd0745.svg",
     "static/media/playstation.svg": "/ignite/static/media/playstation.4bbb4079f3e85b5523f4507b1910c83f.svg",
@@ -9,10 +9,11 @@
     "static/media/nintendo.svg": "/ignite/static/media/nintendo.a60973c8c6848549b52fe143d0f17a54.svg",
     "index.html": "/ignite/index.html",
     "static/media/apple.svg": "/ignite/static/media/apple.aed8126aa230f2eb33526f7b9e63ed04.svg",
-    "main.4b6f4ce4.js.map": "/ignite/static/js/main.4b6f4ce4.js.map",
+    "static/media/logo.svg": "/ignite/static/media/logo.9b6b8655566296b0edaa86ec3dbac3a0.svg",
+    "main.b5d1e0f4.js.map": "/ignite/static/js/main.b5d1e0f4.js.map",
     "787.875c6a88.chunk.js.map": "/ignite/static/js/787.875c6a88.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.4b6f4ce4.js"
+    "static/js/main.b5d1e0f4.js"
   ]
 }
