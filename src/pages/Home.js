@@ -33,7 +33,7 @@ const {popular, newGames, upcoming, searched} = useSelector((state) => state.gam
             <AnimateSharedLayout type="crossfade">
             <AnimatePresence>{pathId && <GameDetail pathId={pathId} />} </AnimatePresence>
 
-            {searched.length ? (
+            {searched.length > 0 && (
             <div className="searched">
                 <h2>Searched Games</h2>
                 <Games>
@@ -47,7 +47,7 @@ const {popular, newGames, upcoming, searched} = useSelector((state) => state.gam
                     />)}
                 </Games>
             </div>
-            ) : ""}
+            )}
 
             <h2>Upcoming Games</h2>
             <Games>
